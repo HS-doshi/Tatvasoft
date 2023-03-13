@@ -59,7 +59,6 @@ class Form extends Component {
                     <label>Comments</label>
                     <textarea value={comments} onChange={this.handlecomment}></textarea>
                 </div>
-
                 <div>
                     <label>Topic</label>
                     <select value={topic} onChange={this.handletopic} >
