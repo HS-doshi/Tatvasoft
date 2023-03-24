@@ -57,11 +57,17 @@ import MouseContainer from './component/MouseContainer';
 import IntervalClassCounter from './component/IntervalClassCounter';
 import IntervalHookCounter from './component/IntervalHookCounter';
 import DataFetching from './component/DataFetching';
+import Counter1Recu from './component/Counter1Recu';
+import Counter2Redu from './component/Counter2Redu';
+import Counter3Recu from './component/Counter3Redu';
 // import Login from './component/Login';
 
 
 // import Home from './pages/Home'
 // import Message from './pages/Message'
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 class App extends React.Component {
 
@@ -191,6 +197,24 @@ class App extends React.Component {
         <IntervalHookCounter />
         <hr></hr>
         <DataFetching />
+
+
+
+        {/* 24-3-23 */}
+        <h3>Use Context Concept!</h3>
+        <UserContext.Provider value={'I am Heet.'}>
+          <ChannelContext.Provider value={'I am from Idar.'}>
+            <ComponentC />
+          </ChannelContext.Provider>
+        </UserContext.Provider>
+
+        <hr></hr>
+        <h3>Day - 18 : Task 1 -Counter Using useReducer</h3>
+
+        <Counter1Recu />
+        <Counter2Redu />
+        <hr></hr>
+        <Counter3Recu />
       </div>
     );
   }
